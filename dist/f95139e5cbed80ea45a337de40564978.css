@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    min-height: 1280px;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+a,
+a:visited,
+a:hover {
+    color: #f30;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
