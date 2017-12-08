@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import animejs from 'animejs'
 
 const Container = styled.div.attrs({
-  style: ({ opcaity }) => ({
-    opcaity
+  style: ({ opacity }) => ({
+    opacity
   }),
 })`
   background: Azure;
@@ -49,8 +49,8 @@ class Screen1 extends React.Component {
     })
   }
 
-  componentWillUpdate(nextProps) {
-    this.animation.seek(this.animation.duration * nextProps.progress)
+  componentDidUpdate(prevProps) {
+    this.animation.seek(this.animation.duration * prevProps.progress)
   }
 
   render() {

@@ -6,6 +6,10 @@ import {Screen1} from './Screens/Screen1'
 import {Screen2} from './Screens/Screen2'
 import {Screen3} from './Screens/Screen3'
 import {Screen4} from './Screens/Screen4'
+import {Step1} from './Screens/Step1'
+import {Step2} from './Screens/Step2'
+import {Step3} from './Screens/Step3'
+import {Step4} from './Screens/Step4'
 
 const Container = styled.div`
   display: flex;
@@ -33,16 +37,24 @@ const Step = styled.div`
   }
 `
 
-
-
 class Layout extends Component {
-
-
   screens = [
-    Screen1,
-    Screen2,
-    Screen3,
-    Screen4
+    {
+      screen: Screen1,
+      step: Step1
+    },
+    {
+      screen: Screen2,
+      step: Step2
+    },
+    {
+      screen: Screen3,
+      step: Step3
+    },
+    {
+      screen: Screen4,
+      step: Step4
+    }
   ]
 
   componentDidMount() {
@@ -52,39 +64,25 @@ class Layout extends Component {
   render() {
     const {windowHeight, progress, currentIndex} = this.props
 
-    const CurrentScreen = this.screens[currentIndex]
+    const CurrentScreen = this.screens[currentIndex].screen
 
     return (
       <Container data-ui="container">
         <Steps data-ui="steps">
-          <Step
-            style={{height: `${windowHeight}px`}}
-            data-ui="step-0"
-            className={currentIndex === 0 ? 'is-active' : ''}
-          >
-            <p>Step 1</p>
-          </Step>
-          <Step
-            style={{height: `${windowHeight}px`}}
-            data-ui="step-1"
-            className={currentIndex === 1 ? 'is-active' : ''}
-          >
-            <p>Step 2</p>
-          </Step>
-          <Step
-            style={{height: `${windowHeight}px`}}
-            data-ui="step-2"
-            className={currentIndex === 2 ? 'is-active' : ''}
-          >
-            <p>Step 3</p>
-          </Step>
-          <Step
-            style={{height: `${windowHeight}px`}}
-            data-ui="step-3"
-            className={currentIndex === 3 ? 'is-active' : ''}
-          >
-            <p>Step 4</p>
-          </Step>
+          {this.screens.map((screen, index) => {
+            const CurrentStep = screen.step
+
+            return (
+              <Step
+                style={{height: `${windowHeight}px`}}
+                data-ui={`step-${index}`}
+                className={currentIndex === index ? 'is-active' : ''}
+                key={index}
+              >
+                <CurrentStep />
+              </Step>
+            )
+          })}
         </Steps>
 
         <Graphic

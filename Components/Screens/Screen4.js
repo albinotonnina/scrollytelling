@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div.attrs({
-  style: ({ opcaity }) => ({
-    opcaity
+  style: ({ opacity }) => ({
+    opacity
   }),
 })`
   background: Honeydew;
