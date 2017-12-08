@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --no-minify"
+    "build": "parcel build index.html --no-minify --public-url ./",
+    "postinstall": "yarn build"
   },
   "author": "Albino Tonnina",
   "license": "ISC",

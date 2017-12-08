@@ -5,8 +5,6 @@ const app = express()
 
 app.use(logfmt.requestLogger())
 
-app.use('/dist', express.static(path.join(__dirname + '/dist')));
 app.use('/', express.static(path.join(__dirname + '/dist')));
-// app.use('/', express.static(path.join(__dirname + '/dist')));
 
 app.listen(Number(process.env.PORT || 5000))
