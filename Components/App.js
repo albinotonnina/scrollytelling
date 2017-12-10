@@ -5,7 +5,6 @@ import {Outro} from './Outro'
 import {Scrollama} from './Scrollama'
 
 class App extends React.Component {
-
   render() {
     return [
       <Intro key="intro"/>,
