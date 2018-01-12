@@ -1,5 +1,7 @@
 # React, HMR, Parcel, Scrollama
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/albinotonnina/scrollytelling.svg)](https://greenkeeper.io/)
+
 Scrollytelling Layout. Made with React, loosely based on [this example on Scrollama](https://russellgoldenberg.github.io/scrollama/sticky-js/)
 
 
