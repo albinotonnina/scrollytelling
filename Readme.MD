@@ -29,4 +29,4 @@ https://pudding.cool/process/how-to-implement-scrollytelling/ by [Russel Gildenb
 [Animation, Pacing, Exposition](https://www.youtube.com/watch?v=Z4tB6qyxHJA) by [Tony Chu](https://twitter.com/tonyhschu)
 
 ### TODO
-#### media queries 
+#### media queries
